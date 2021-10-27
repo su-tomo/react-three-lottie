@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+	position: absolute;
+  color: #F26936;
+  font-size: 10pc;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+.maker {
+	position: absolute;
+  color: #35ABAF;
+  font-size: 4pc;
+	bottom: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: right;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 2; /* TODO Solve this in HTML */
+}
