@@ -23,18 +23,11 @@ export function ThreeButton() {
             camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 10);
             camera.position.z = 2.5;
 
-            // const geometry = new THREE.BoxGeometry();
-			// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			// const cube = new THREE.Mesh( geometry, material );
-			// scene.add( cube );
-
             const loader1 = new LottieLoader();
             loader1.setQuality( 2 );
             loader1.load( 'texture/lottie/404_black.json', function ( texture ) {
 
                     setupControls( texture.animation );
-
-                    // texture = new THREE.TextureLoader().load( 'textures/uv_grid_directx.jpg' );
 
                     const geometry = new RoundedBoxGeometry( 1, 0.5, 0.3, 7, 0.2 );
                     const material = new THREE.MeshStandardMaterial( { roughness: 0.1, map: texture } );
@@ -52,8 +45,6 @@ export function ThreeButton() {
             loader2.load( 'texture/lottie/loading_black.json', function ( texture ) {
 
                     setupControls( texture.animation );
-
-                    // texture = new THREE.TextureLoader().load( 'textures/uv_grid_directx.jpg' );
 
                     const geometry = new RoundedBoxGeometry( 1, 1, 1, 7, 0.2 );
                     const material = new THREE.MeshStandardMaterial( { roughness: 0.1, map: texture } );
@@ -81,9 +72,7 @@ export function ThreeButton() {
 
             const animate = function () {
 				requestAnimationFrame( animate );
-
-				// cube.rotation.x += 0.01;
-				// cube.rotation.y += 0.01;
+                
                 if ( mesh && mesh2) {
                     mesh.rotation.x += 0.01;
 					mesh.rotation.y -= 0.01;
